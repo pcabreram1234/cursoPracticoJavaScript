@@ -88,14 +88,13 @@ const verificarLados = () => {
     console.log(ladosIguales);
 }; */
 
-function calcularAreaIso() {
+/* const lado1 = document.getElementById("lado1").value;
+const lado2 = document.getElementById("lado2").value;
+const lado3 = document.getElementById("lado3").value; */
+
+function calcularAreaIso(lado1, lado2, lado3) {
     let a = 0;
     let b = 0;
-
-    const lado1 = document.getElementById("lado1").value;
-    const lado2 = document.getElementById("lado2").value;
-    const lado3 = document.getElementById("lado3").value;
-
     lado1 === lado2 ? ((a = lado1), (b = lado3)) : a;
     lado2 === lado3 ? ((a = lado2), (b = lado1)) : a;
     lado3 === lado1 ? ((a = lado3), (b = lado2)) : a;

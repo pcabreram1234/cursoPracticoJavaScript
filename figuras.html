@@ -63,7 +63,7 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <button class="btn btn-success" type="button" onclick="calcularAreaIso();">
+                    <button class="btn btn-success" type="button" onclick="calcularAreaIso(document.getElementById('lado1').value,document.getElementById('lado2').value,document.getElementById('lado3').value);">
               Calcular Area
             </button>
                     <button class="btn btn-primary" type="button" onclick="calcularPerimetroIso();">
@@ -72,6 +72,12 @@
                 </div>
             </div>
         </form>
+
+        <div class="container-sm">
+            <p class="w-50 text-center">
+                El software verifica automáticamente cual lado es la base además de verificar si dichos datos corresponden a un triangulo isóceles
+            </p>
+        </div>
     </div>
 
     <script src="./figuras.js"></script>
