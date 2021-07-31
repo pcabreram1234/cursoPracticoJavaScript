@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <title>Descuentos y Porcentajes | Curso Practico de JavaScript</title>
+</head>
+</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 class="text-center">Porcentajes y Descuentos</h1>
+        <p class="text-muted">Este es el segundo taller del Curso Práctico de JavaScript</p>
+    </div>
+
+    <section>
+        <div class="container">
+            <h2>Calcula el precio a pagar de tus productos con descuentos</h2>
+            <form action="">
+                <div class="row">
+                    <div class="col-md-4"><label class="form-label" for="inputPrice">Escribe el precio de tu producto:</label></div>
+                    <div class="col-md-4"><input class="form-control" type="text" name="precio" id="inputPrice">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4"> <label for="inputDiscount">Escribe el descuento de tu producto:</label></div>
+                    <div class="col-md-4"> <input class="form-control" type="text" name="descuento" id="inputDiscount"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4"> <label for="inputCupones"># de cupones</label></div>
+                    <div class="col-md-4"> <input class="form-control" type="text" name="descuento" id="inputCupones"></div>
+                </div>
+
+                <div class="d-flex justify-content-center my-2">
+                    <button class="btn btn-info text-light w-2 mx-2" type="button" id="btnCalcularPrecio">Calcular Precio</button>
+                    <button class="btn btn-secondary text-light w-2" type="button" id="btnReiniciar">Reiniciar</button>
+                </div>
+
+                <div class="row">
+                    <p>Precio a Pagar <span class="text-success fw-bolder" id="precioApagar"></span>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </section>
+    <script src="./descuentos.js"></script>
+</body>
+
+</html>
