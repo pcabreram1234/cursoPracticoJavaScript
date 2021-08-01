@@ -1,10 +1,51 @@
-function mediana(lista) {
-    const mitadLista1 = lista.length / 2;
-    mitadLista1 %= 2 ? "Es par" : "Es impar";
-}
-/* 
-const lista1 = [100, 200, 500, 400000000];
-const mitadLista1 = lista1.length / 2;
-mitadLista1 %= 2 == 0 ? "Es par" : "Es impar"; */
+const lista1 = [4, 6, 7, 9, 25, 20];
+/* const mitadLista1 = parseInt(lista1.length / 2); */
+let mediana;
 
-mediana([100, 200, 500, 400000000]);
+function calcularMediaAritmetica(lista) {
+    const sumaLista = lista.reduce((valorAcumulado = 0, elemento) => {
+        return valorAcumulado + elemento;
+    });
+
+    const promedioLista = sumaLista / lista.length;
+    return promedioLista;
+}
+
+function esPar(numero) {
+    if (numero % 2 === 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function calcularMediana(lista) {
+    const mitadLista = parseInt(lista.length / 2);
+    if (esPar(lista.length)) {
+        const elemento1 = lista[mitadLista];
+        const elemento2 = lista[mitadLista - 1];
+        const promedio1 = calcularMediaAritmetica([elemento1, elemento2]);
+        mediana = promedio1;
+        return mediana;
+    } else {
+        mediana = lista[mitadLista];
+        return mediana;
+    }
+}
+
+function comparar(lista) {
+    let arr = lista.map((el, i) => {
+        if (el > el[i + 1]) {
+            return el;
+        } else {
+            return el[i + 1];
+        }
+    });
+}
+
+function ordenarLista(lista) {
+    let newArray = lista.sort(comparar(lista));
+    return newArray;
+}
+
+calcularMediana(lista1);
