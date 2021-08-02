@@ -33,19 +33,25 @@ function calcularMediana(lista) {
     }
 }
 
-function comparar(lista) {
-    let arr = lista.map((el, i) => {
-        if (el > el[i + 1]) {
-            return el;
-        } else {
-            return el[i + 1];
-        }
-    });
-}
+const arrayOrdenado = {};
 
-function ordenarLista(lista) {
-    let newArray = lista.sort(comparar(lista));
-    return newArray;
+/* function comparar(lista) {
+  let arr = lista.map((el, i) => {
+    if (el > el[i + 1]) {
+      return el;
+    } else {
+      return el[i + 1];
+    }
+  });
 }
+ */
+
+lista1.map((el) => {
+    if (arrayOrdenado[el]) {
+        arrayOrdenado[el] += 1;
+    } else {
+        arrayOrdenado[el] = 1;
+    }
+});
 
 calcularMediana(lista1);

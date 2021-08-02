@@ -11,8 +11,17 @@ lista1.map(function(el) {
 });
 
 //Convertir objeto a Array
-const lista1Arrray = Object.entries(lista1Count).sort(
-    function(valorAcumulado, nuevoElemento) {
-        valorAcumulado - nuevoElemento;
-    }
-);
+const lista1Arrray = Object.entries(lista1Count).sort(function(
+    valorAcumulado,
+    nuevoElemento
+) {
+    return valorAcumulado[1] - nuevoElemento[1];
+});
+
+let persona = {
+    nombre: "Phillip",
+    apellido: "Cabrera",
+    edad: 31,
+    profesion: "Estudiante",
+    pais: "Republica dominicana",
+};
