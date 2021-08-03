@@ -1,0 +1,28 @@
+.formularContainer{
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.formulaContainer--h2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 20vw;
+    justify-content: flex-end;
+}
+
+.formularContainer--img{
+    display: flex;
+    align-items: flex-end;
+}
+
+.formulaContainer--resultado{
+    display: flex;
+    flex-direction: row;
+  /*   margin-right: 40vh; */
+    width: 200vw;
+}
