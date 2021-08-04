@@ -31,6 +31,13 @@ const calcularMediaArmonica = (lista) => {
     return nNumeros / valorAcumuladoSuma;
 };
 
+const resetForm = () => {
+    listaElementos.splice(0)
+    document.getElementById("inputAdd").value = "";
+    document.getElementById('textAreaResult').value = "";
+    document.getElementById("inputAdd").focus();
+}
+
 document.getElementById("btnCalculate").addEventListener("click", () => {
     if (listaElementos.length === 0) {
         alert("Favor introducir por lo menos dos valores");
@@ -46,6 +53,10 @@ document.getElementById("btnAddvalue").addEventListener("click", () => {
     let valor = document.getElementById("inputAdd").value;
     agregarElemento(valor);
 });
+
+document.getElementById('btnReset').addEventListener('click', () => {
+    resetForm()
+})
 
 document.getElementById("inputAdd").addEventListener("keydown", () => {
     soloNumeros();

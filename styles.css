@@ -36,27 +36,38 @@
 .resultcontainer {
     position: relative;
     width: 100%;
-    height: 50vh;
-    left: 45px;
-    top: 45px;
+    height: 100%;
     background: linear-gradient(117.09deg, #99d5ec 9.64%, #7ce3ec 100%);
     border: 1px solid transparent;
     border-radius: 20px;
-    display: flex;
-    flex-direction: row;
+    bottom: 3vh;
+/*     display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr ; */
 }
 
-.resultcontainer__row {
+
+
+.resultcontainer>:first-child{
     display: flex;
     flex-direction: row;
+    margin: 10px 0px;
+}
+
+.resultcontainer>:last-child{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px 10px;
+}
+
+.resultcontainer__row> input,.resultcontainer__row>button{
+    margin: 0px 2vh;
 }
 
 .resultcontainer__row--input {
-    position: absolute;
     width: 342px;
     height: 90px;
-    left: 40px;
-    top: 29px;
     border: 1px solid transparent;
     border-radius: 20px;
     font-size: 20px;
@@ -64,11 +75,25 @@
 }
 
 .resultcontainer__row--button {
-    position: absolute;
-    width: 28vh;
+    width: 200px;
     height: 90px;
-    left: 392px;
-    top: 29px;
+    font-size: 20px;
+    padding: 0px 10px;
+    background: linear-gradient(180deg, #8ef8bb 0%, rgba(142, 248, 187, 0) 100%);
+    border: 1px solid #9180b5;
+    border-radius: 40px;
+}
+
+.buttonImage{
+    width: min-content;
+    height: 10vh;
+}
+
+
+
+.resultcontainer__row--reiniciar {
+    width: 200px;
+    height: 90px;
     font-size: 20px;
     padding: 0px 50px;
     background: linear-gradient(180deg, #8ef8bb 0%, rgba(142, 248, 187, 0) 100%);
@@ -77,11 +102,8 @@
 }
 
 .resultcontainer__row--btnCalc {
-    position: absolute;
-    width: 300px;
+    width: max-content;
     height: 90px;
-    left: 100vh;
-    top: 29px;
     font-size: 20px;
     padding: 0px 50px;
     background: linear-gradient(180deg, #8ef8bb 0%, rgba(142, 248, 187, 0) 100%);
@@ -89,38 +111,12 @@
     border-radius: 40px;
 }
 
-.resultcontainer__row--reiniciar {
-    position: absolute;
-    width: 20vh;
-    height: 90px;
-    left: 700px;
-    top: 29px;
-    font-size: 20px;
-    padding: 0px 50px;
-    background: linear-gradient(180deg, #8ef8bb 0%, rgba(142, 248, 187, 0) 100%);
-    border: 1px solid #9180b5;
-    border-radius: 40px;
-}
 
-.addMore {
-    position: absolute;
-    width: 84px;
-    height: 84px;
-    left: 8px;
-    top: 5px;
-}
 
-.calculateIcon {
-    position: absolute;
-    width: 84px;
-    height: 84px;
-    left: 40px;
-    top: 5px;
-}
 
 .resultcontainer__row--button:hover,
 .resultcontainer__row--button:active,
-.resultcontainer__row--btnCalc:hover {
+.resultcontainer__row--btnCalc:hover,.resultcontainer__row--reiniciar:hover {
     color: white;
     background: linear-gradient(180deg, #629eb4 0%, #99d5ec 100%);
     border: 1px solid #9180b5;
@@ -128,18 +124,14 @@
 }
 
 .resultcontainer__row--button:active,
-.resultcontainer__row--btnCalc:active {
+.resultcontainer__row--btnCalc:active,.resultcontainer__row--reiniciar:active {
     border: 1px solid #9180b5;
     filter: drop-shadow(2px 2px 4px rgba(255, 252, 252, 0.6));
     border-radius: 40px;
 }
 
 textarea {
-    position: absolute;
-    width: 50%;
-    height: 240px;
-    left: 40px;
-    top: 150px;
+    width: 30%;
     background: #ffffff;
     border: 1px solid #3f3f3f;
     box-sizing: border-box;
@@ -151,14 +143,9 @@ textarea {
 }
 
 .resultcontainer__row--result {
-    position: absolute;
-    width: 50vh;
-    height: 240px;
-    left: 80vh;
-    top: 150px;
+    width: 50%;
     background: #ffffff;
     border: 1px solid #3f3f3f;
-    box-sizing: border-box;
     border-radius: 20px;
     font-size: 110px;
     font-family: Roboto;
