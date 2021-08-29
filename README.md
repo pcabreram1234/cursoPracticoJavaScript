@@ -36,7 +36,7 @@ La media armónica es igual al número de elementos de un grupo de cifras entre 
 
 Debemos tener en cuenta que esta presenta ciertas desventajas, como que no puede calcularse si una de las observaciones es igual a cero. Es decir, ninguno de los elementos puede ser nulo. Por lo tanto en nuestro código de javaScript de existir un elemento con valor 0 o nulo debe dar un error o alerta.
 
-###Tarea para finalizar el Curso.
+### Tarea para finalizar el Curso.
 
 Crear una pagina que permita ingresar datos de personas como :
 Nombre, País,Profesion, Sueldo Bruto, Gastos, % destinado a seguro medico al igual que el de las pensiones.
